@@ -71,7 +71,7 @@ function initialize_leaf(){
 				.addTo(map);
 
 		markers['charlottesville'] = L.marker(locations['charlottesville'], {icon: coshxIcon})
-				.bindPopup('Charlottesville<br>1110 Market St East Suite N7<br>Charlottesville, VA 22902')
+				.bindPopup('Charlottesville<br>1110 East Market St Suite N7<br>Charlottesville, VA 22902')
 				.addTo(map);
 
 		markers['sanfrancisco'] = L.marker(locations['sanfrancisco'], {icon: coshxIcon})
@@ -337,7 +337,16 @@ jQuery(function(){
 	    'img/employees/calvindelamere-avatar.png',	    
 	    'img/employees/davidkovsky-avatar.png',	    
 	    'img/employees/gabekopley-avatar.png',	    
-	    'img/employees/test-graph.png',	    
+	    'img/employees/ben.png',
+	    'img/employees/calvin.png',
+	    'img/employees/chielo.png',
+	    'img/employees/dave.png',
+	    'img/employees/david.png',
+	    'img/employees/gabe.png',
+	    'img/employees/gil.png',
+	    'img/employees/michael.png',
+	    'img/employees/ryan.png',
+	    'img/employees/sang.png',	    
 	    'img/folio-test.png'
 	]);
 
