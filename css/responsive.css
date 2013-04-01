@@ -57,6 +57,15 @@
 		width: 17%;
 	}
 
+	.contact-info h3 {
+		margin: 0;
+		text-align: center;
+	}
+
+	.contact-info .dots {		
+		margin: 10px auto 10px;		
+	}
+
 	img.lets-talk{
 		margin-left: 50%;
 	}

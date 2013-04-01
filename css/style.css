@@ -43,8 +43,7 @@ h1{
 
 h1#logo{
 	margin-top: 0;	
-	left: 0;
-	opacity: 0;
+	left: 0;	
 }
 
 h1#logo.no-animation{
@@ -184,7 +183,7 @@ section p a{
 	background-color: #3b5997;
 }
 
-.btn.dark-blue:hover{
+{
 	color: #fff;
 	background-color: #545454;
 }
@@ -213,7 +212,6 @@ nav{
 }
 
 #header-content nav{
-	opacity: 0;
 	margin-top: 12px;
 }
 	
@@ -843,7 +841,7 @@ footer ul li a:hover{
 	background-color: #f7f7f7;
 	border-bottom: 1px solid #e9e9e9;
 	border-top: 1px solid #e9e9e9;
-	margin-top: 140px;
+	margin-top: 70px;
 	overflow: hidden;
 }
 .header-gray-planner h1{
@@ -1186,7 +1184,6 @@ em{
 	background-color: #fbaf3f; 
 	z-index: 1; 
 	margin-bottom: -14px;
-	margin-top: 140px;
 }
 
 
@@ -1277,10 +1274,14 @@ img.lets-talk{
 .contact-info h3{
 	text-align: center;
 	margin: 0;
+	margin-left: 60px;
 }
 
 .contact-info .dots{
-	margin: 10px auto 10px;
+	margin: 10px auto 10px;	
+	background: url("../img/ellipsis.png") no-repeat scroll center 0 transparent;
+	width: 100%;
+	margin-left: 23px;
 }
 
 .contact-form{
@@ -1298,11 +1299,13 @@ img.lets-talk{
 	color: #9f9f9f;
 	font-size: 12px;
 	text-align: center;
+	margin-left: 60px;
 }
 
 .contact-info .column.six p.required{
 	float: left;
 	line-height: 42px;
+	margin-left: 0;	
 }
 .contact-form button{
 	width: 78px;

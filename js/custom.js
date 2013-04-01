@@ -16,45 +16,10 @@ function preload(arrayOfImages) {
     });
 }
 
-function initialize()
-{			
-	var latlng = new google.maps.LatLng(39.9, -101.5);	
-	var myOptions = {
-		zoom: 5,
-		center: latlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		disableDefaultUI: true,
-		draggable: false,
-		scrollwheel: false
-	};
-	map = new google.maps.Map(document.getElementById("map-canvas"),
-		myOptions);
-
-	var pos_boulder  = new google.maps.LatLng(locations['boulder'].lat, locations['boulder'].lng);
-	var pos_charlottesville  = new google.maps.LatLng(locations['charlottesville'].lat, locations['charlottesville'].lng);
-	var pos_sanfrancisco  = new google.maps.LatLng(locations['sanfrancisco'].lat, locations['sanfrancisco'].lng);
-	
-	var marker_boluder = new google.maps.Marker({
-		position: pos_boulder,            
-		map: map,
-		icon: "img/map_marker.png"
-	});
-	var marker_charlottesville = new google.maps.Marker({
-		position: pos_charlottesville,            
-		map: map,
-		icon: "img/map_marker.png"
-	});
-	var marker_sanfrancisco = new google.maps.Marker({
-		position: pos_sanfrancisco,            
-		map: map,
-		icon: "img/map_marker.png"
-	});
-}
-
-function initialize_leaf(){
+function initialize(){
 
 	var coshxIcon = L.icon({
-		iconUrl: 'img/map_marker.png',	
+		iconUrl: 'img/map_marker.png',
 		iconSize: [30, 49],
 		iconAnchor: [14, 49],
 		popupAnchor:  [0, -49]
@@ -71,7 +36,7 @@ function initialize_leaf(){
 				.addTo(map);
 
 		markers['charlottesville'] = L.marker(locations['charlottesville'], {icon: coshxIcon})
-				.bindPopup('Charlottesville<br>1110 East Market St Suite N7<br>Charlottesville, VA 22902')
+				.bindPopup('Charlottesville<br>1110 Market St East Suite N7<br>Charlottesville, VA 22902')
 				.addTo(map);
 
 		markers['sanfrancisco'] = L.marker(locations['sanfrancisco'], {icon: coshxIcon})
@@ -106,24 +71,9 @@ function resetField() {
 };
 
 jQuery(function(){
-	if(jQuery.isFunction($.fn.dropkick)){
-		$('#project-budget').dropkick();	
-	}
-	
-	// if( $.cookie('').length === 0){
-	// 	alert('need to create cookie');
-	// }
+	if(jQuery.isFunction($.fn.dropkick))
+		$('#project-budget').dropkick();
 
-	/*x = $.cookie('visited_coshx');
-	console.log($.cookie());	
-	if('undefined' === typeof(x))
-	{
-		$.cookie('visited_coshx', 'yes', {'path': '/'});
-	}
-	else{
-		//alert('all is well chaps');
-	}*/
-	
 	$('nav #main-nav').localScroll({
 		offset: {top:-140},
 		duration: 900,
@@ -157,7 +107,7 @@ jQuery(function(){
 		}
 	});
 
-	$("#content-wrapper").on({
+	$("#content-wrapper, .window-wrapper").on({
 		mouseenter: function () {			
 			$('.expand', this).animate({
 				'bottom': 0
@@ -184,7 +134,7 @@ jQuery(function(){
     $('input, textarea').on('paste', toggleLabel);
     $('select').on('change', toggleLabel);
 
-	$('#content-wrapper').on({
+	$('#content-wrapper, .window-wrapper').on({
 		click: function (e) {
 			e.preventDefault();
 			imgHeight = $('#case-study-image').height();
@@ -261,18 +211,6 @@ jQuery(function(){
 	$('.team-mate a').on('click', function(e){
 		//e.preventDefault();
 	});
-    
-    /*$('.addresses li a').on('click', function(e){    	
-    	e.preventDefault();
-    	alert('Hi!');
-    	var l = $(this).attr('rel');
-    	$('.addresses li a').removeClass('selected');
-    	$(this).addClass('selected');
-    	var latlng = new google.maps.LatLng(locations[l].lat, locations[l].lng);
-    	map.panTo(latlng);
-    	map.setZoom(16);
-
-    });*/
 
 	$('#content-wrapper').on({		
 		click:function(e){    	
@@ -284,52 +222,6 @@ jQuery(function(){
 				markers[l].openPopup();
 			}
 		}, 'a.location');
-
-	$(window).on("hashchange", function(e){
-		if ( window.location.hash == "#home" && (!url || url == "#")) return false;
-		url = window.location.hash || "#home";
-		var homeSections = ['about', 'projects', 'services'];
-		url=url.replace('#','');
-		scroll = '';
-		if(homeSections.indexOf(url) != -1)
-		{
-			scroll = url;
-			url = 'home';			
-		}
-		else{
-			scroll = url;
-		}
-	
-		$('#content-wrapper').removeClass('fadeOut').removeClass('fadeIn');
-
-		$.ajax({
-			url: 'loadpage.php',
-			type: 'POST',
-			dataType: 'html',
-			data: {url: url},
-			success: function(data, textStatus, xhr) {
-				if(url === 'home')
-				{
-					shownTeamSection = false;
-					shownAboutSection = false;
-				}
-				
-				$('#content-wrapper').addClass('fadeOut');
-
-				setTimeout(function(){
-					$.scrollTo(0);
-					$('#content-wrapper').toggleClass('fadeOut').toggleClass('fadeIn');
-					$('#content-wrapper').html(data);
-					if(scroll !== ''){
-						$('nav ul li a').removeClass('active');
-						$('a[rel='+ scroll + ']').addClass('active');
-						$(window).scrollTo('#' + scroll, {offset: {top:-140},});
-					}
-				}, 600);
-
-			}
-		});
-	});
 	
 	preload([
 	    'img/employees/davekapp-avatar.png',
@@ -349,22 +241,6 @@ jQuery(function(){
 	    'img/employees/sang.png',	    
 	    'img/folio-test.png'
 	]);
-
-	window.location.hash == "" || window.location.hash == "#" || window.location.hash == "#home" || $(window).trigger("hashchange");
-
-	function waitForIt(el, callback){
-		el.on("mozAnimationEnd webkitAnimationEnd msAnimationEnd oAnimationEnd animationend mozAnimationEnd", callback);
-	} 
 	
-	waitForIt($("#site-loader"), function(){		
-		$("#logo").removeClass("paused");
-	});
-
-	waitForIt($("#logo"), function(){	
-
-		$("nav").removeClass("paused");
-		$("#content-wrapper").removeClass("paused");
-		$(".contact-info").removeClass("paused");
-	});
 
 });
