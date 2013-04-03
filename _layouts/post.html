@@ -1,5 +1,4 @@
 ---
-title: Coshx Labs
 layout: default
 ---
 
@@ -14,8 +13,8 @@ layout: default
 					<div class="column four"><img src="img/avatar.png" alt="" class="avatar"></div>
 					<section class="column eight blog end">
 						<div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
-						<h2>{{ page.title }}</h2>
-						<h3></h3>				
+						<h2></h2>
+						<h3>{{ post.title }}</h3>				
 						<p>{{ content }}</p>
 
 						<ul>
@@ -31,22 +30,12 @@ layout: default
 			<section class="column three end">
 				<h3>Most popular</h3>
 				<ul class="widget">
+					{% for post in site.posts limit: 5 %}
 					<li>
-						<a href="#">Case Study in Validated Learning: GigDog's 1st Experiment</a>
-						<div class="date">16 December 2012</div>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+						<div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
 					</li>
-					<li>
-						<a href="">Model of Quicken Mac Essentials Sqlite database</a>
-						<div class="date">December 4 2012</div>
-					</li>
-					<li>
-						<a href="">Casperjs automation</a>
-						<div class="date">November 30 2012</div>
-					</li>
-					<li>
-						<a href="">Ruby's "and" and "or" operators explained</a>
-						<div class="date">October 31 2012</div>
-					</li>
+					{% endfor %}
 				</ul>
 				<a href="" class="btn orange center">Contact Us</a>
 				<a href="" class="btn dark-blue center">Like our page</a>
