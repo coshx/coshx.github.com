@@ -15,9 +15,7 @@ A strategy for migrating specific data (such as all active users) from mysql to 
 ------
 
 ```ruby
-
-
-### schema.rb
+#schema.rb
 
 ActiveRecord::Schema.define(:version => 0) do
   create_table "users" do |t|
@@ -30,18 +28,17 @@ ActiveRecord::Schema.define(:version => 0) do
   create_table "photos" do |t|
   end
 end
-
 ```
 
 ```ruby
-### script.rb
+#script.rb
 
 require 'mysql'
 require 'sqlite3'
 
-### transfer_table('users', 'id', active_user_ids)
-### transfer_table('posts', 'user_id', active_user_ids)
-### transfer_table('photos', 'id', active_user_photo_ids)
+#transfer_table('users', 'id', active_user_ids)
+#transfer_table('posts', 'user_id', active_user_ids)
+#transfer_table('photos', 'id', active_user_photo_ids)
 
 def transfer_table(table_name, id_column_name, ids_to_transfer)
   ids_to_transfer.each do |id|
