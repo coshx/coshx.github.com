@@ -14,7 +14,7 @@ A strategy for migrating specific data (such as all active users) from mysql to 
 
 ------
 
-```ruby
+{% highlight ruby %}
 #schema.rb
 
 ActiveRecord::Schema.define(:version => 0) do
@@ -28,9 +28,11 @@ ActiveRecord::Schema.define(:version => 0) do
   create_table "photos" do |t|
   end
 end
-```
+{% endhighlight %}
 
-```ruby
+</br>
+
+{% highlight ruby %}
 #script.rb
 
 require 'mysql'
@@ -130,3 +132,4 @@ end
 transfer_table('users', 'id', active_user_ids)
 transfer_table('posts', 'user_id', active_user_ids)
 transfer_table('photos', 'id', active_user_photo_ids)
+{% endhighlight %}
