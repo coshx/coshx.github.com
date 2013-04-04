@@ -20,4 +20,4 @@ We look forward to much productive collaboration with more brilliant hires and c
    
 
 ![Stewie at work](https://s3.amazonaws.com/uploads.hipchat.com/9996/25967/m07gxvfyu6px3gh/c9de9f3ae7d511e18393123138100c1d_7.jpg)
-###### Stewie enjoys a brief rest while his tests run
+### Stewie enjoys a brief rest while his tests run

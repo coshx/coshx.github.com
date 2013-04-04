@@ -11,7 +11,7 @@ The Problem
 For an example application, we have some classes that are related to each other with a polymorphic association. In this case, college students and courses. The uniqueness restriction comes in because we want to ensure that each student is only registered for the course once, but we want to make sure that an `UndergradStudent` and a `GraduateStudent` can both take the course at the same time even if they have the same `id`.
 
 ```ruby
-# test
+### test
 describe Enrollment do
   # valudate_uniqueness_of requires a previously created model
   before(:each) { Factory.create :enrollment }
@@ -19,7 +19,7 @@ describe Enrollment do
   it { should validate_uniqueness_of(:course_id).scoped_to :enrollee_type, :enrollee_id }
 end
 
-# implementation
+### implementation
 class Enrollment
   belongs_to :enrollee, :polymorphic => true
   belongs_to :course
@@ -53,7 +53,7 @@ Perfect. Now we go ahead and run our uniqueness test and have a beer after a lon
 
 Or not. UndergradStudenu? Where in the world did that come from?
 
-The Source
+### The Source
 ----------
 
 The source of this error is a combination of three things.
@@ -91,7 +91,7 @@ The last piece of the puzzle is our `validates_presence_of :enrollee`. `@instanc
 
 Without the presence validation, we would never load the `enrollee` object and our test would pass. Without the full validation caused by calling `@instance.valid?` we would similarly never load the `enrollee` object and our test would pass. The combination means that the presence validator attempts to load the full enrollee object and cannot, because its type does not represent a real class.
 
-The Workaround
+### The Workaround
 --------------
 
 Pleasing the matcher can be done by simply declaring `UndergradStudenu` as a class in the test file that inherits from one of the possible types of `enrollee`.

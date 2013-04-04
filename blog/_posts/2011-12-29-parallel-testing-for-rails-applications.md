@@ -5,17 +5,7 @@ author: mike@coshx.com
 ---
 Speed your RSpec, or Cucumber tests up by spreading them across multiple cores.
 
-
-
-
-
-
-
-
-
-
-
-####Initial Setup
+###Initial Setup
 
 *1. Add dependency to Gemfile:*
 
@@ -59,7 +49,7 @@ in env.rb:
 Capybara.server_port = 8888 + ENV['TEST_ENV_NUMBER'].to_i
 ```
 
-####Run your tests!
+###Run your tests!
 
 RSpec
 
@@ -73,7 +63,7 @@ Cucumber
 rake parallel:features
 ```
 
-####Even Process Runtimes
+###Even Process Runtimes
 The parallel_tests gem has the ability to intelligently partition your tests among your system's available processors.  If enabled, this feature will record the runtime of each test and attempt to minimize the total runtime of your test suite. To enable partitioning, add this to your rspec configuration options file:
 
 in spec/parallel_spec.opts or spec/spec.opts:
@@ -83,7 +73,7 @@ in spec/parallel_spec.opts or spec/spec.opts:
   --format ParallelSpecs::SpecRuntimeLogger --out tmp/parallel_profile.log
 ```
 
-####Gotchas
+###Gotchas
 If you have a large and complex test suite, it's likely that you will see some additional failures when you run your tests in parallel for the first time.   Shared resources are a likely culprit for these unexpected failures.  The parallel_tests gem does an excellent job of sandboxing your Rails app and its underlying database, but it has no way of knowing about shared state that exists elsewhere in the application (such as the file system).  
 
 I ran into this issue recently after installing parallel_tests in a Rails 3 application for one of our clients.  After the initial setup, I was getting anywhere from 3-10 test failures while running the suite in parallel.  As it turns out, file generation was the issue.  Some of the tests were outputting generated files to a temp directory (and subsequently clearing that directory).  Occasionally one process would create a file and and attempt to verify its contents.  Before that could complete, a second process would go in and clear said directory, leaving the first process without the file it was expecting (FAIL!).

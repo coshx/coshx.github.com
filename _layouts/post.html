@@ -10,17 +10,17 @@ layout: default
 	<div class="row">		
 			<section class="column nine blogs">
 				<div class="blog-wrapper">
-					<div class="column four"><img src="img/avatar.png" alt="" class="avatar"></div>
+					<div class="column four"><img src="/img/avatar.png" alt="" class="avatar"></div>
 					<section class="column eight blog end">
-						<div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
-						<h2></h2>
-						<h3>{{ post.title }}</h3>				
+
+					
+
+						<div class="date">{{ page.date | date: "%B %d, %Y" }}</div>
+						<h2>{{ page.title }}</h2>
+										
 						<p>{{ content }}</p>
 
-						<ul>
-							<li></li>
-						</ul>
-
+						
 					</section>
 					
 				</div>				
@@ -28,15 +28,7 @@ layout: default
 				<a href="" class="next-post">Next Post</a>
 			</section>
 			<section class="column three end">
-				<h3>Most popular</h3>
-				<ul class="widget">
-					{% for post in site.posts limit: 5 %}
-					<li>
-						<a href="{{ post.url }}">{{ post.title }}</a>
-						<div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
-					</li>
-					{% endfor %}
-				</ul>
+				<section class="column three end">
 				<a href="" class="btn orange center">Contact Us</a>
 				<a href="" class="btn dark-blue center">Like our page</a>
 				<a href="http://www.twitter/coshxlabs" class="btn blue center">@coshxlabs</a>

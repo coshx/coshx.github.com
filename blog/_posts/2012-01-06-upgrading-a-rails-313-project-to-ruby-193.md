@@ -21,7 +21,7 @@ The first option there isn't especially appealing as it's not convenient or all 
 struggle, I got things working. I ended up going with option number three - we switched over to using [Pry](http://pry.github.com/) and [pry-nav](https://github.com/nixme/pry-nav). Here's how to do both of those
 things in case you want to try either of them out.
 
-Getting ruby-debug working with Rails 3.1 and Ruby 1.9.3 right now
+### Getting ruby-debug working with Rails 3.1 and Ruby 1.9.3 right now
 ==================================================================
 
 [This gist](https://gist.github.com/1331533) was the key to making things work - but you need to 'fool' Bundler into using the versions of the gems
@@ -63,7 +63,7 @@ This required manual intervention and I didn't really like that, so I looked int
 wait for the latest versions of these gems to show up on Rubygems). The most obvious choice was [Pry](http://pry.github.com/), so...
 
 
-Debugging using Pry and Rails 3.1 with Ruby 1.9.3
+### Debugging using Pry and Rails 3.1 with Ruby 1.9.3
 =================================================
 
 If you haven't tried out Pry yet, take a look. It's an interesting project that uses a directory metaphor to allow you to explore the Ruby object space. It's more of a 
@@ -87,7 +87,7 @@ Then do a bundle install and you're set. Note that you start Pry with <some obje
 We just started using Pry, so I can't say how I feel about it quite yet (initial impressions are very positive though), but it did succeed at giving us debugging capabilities
 without manual intervention for now.
 
-That's All For Now
+### That's All For Now
 ==================
  
 I hope this helps out if the holdup for you to move over to Ruby 1.9.3 was ruby-debug. We've very happy with the performance improvements in 1.9.3 and I'd definitely recommend it to others.

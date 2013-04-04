@@ -23,11 +23,11 @@ then `Rails.env.test?` will be false, and `config/environments/development.rb` w
 ### Workarounds
 Currently, there are a couple simple workarounds if you want both to behave similarly:
 
-#### 1) be explicit
+### 1) be explicit
   - `RAILS_ENV=test rake cucumber` 
   - annoying to have to remember, but hey, that's what aliases are for, right?
 
-#### 2) <strike>Update the cucumber rake task</strike>
+### 2) <strike>Update the cucumber rake task</strike>
   *EDIT: while this correctly sets `Rails.env`, rails still loads development.rb afterwards*  
   - add the following to the `cucumber:ok` task in `lib/tasks/cucumber.rake`:
 

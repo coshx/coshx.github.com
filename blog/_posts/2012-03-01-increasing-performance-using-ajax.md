@@ -5,15 +5,17 @@ author: calvin@coshx.com
 ---
 In this post I’m going to show how to use Ajax to get JSON to decrease page load times and make your site scale better. This example assumes you're using Rails, but the idea applies elsewhere as well.
 
-<h4>Scenario</h4> You have an expensive call in your controller - it's slow and/or database intensive. Also, the data you get from this call is not actually needed when the page loads because it's displayed after the user interacts with the site.
+<h3>Scenario</h3> 
+You have an expensive call in your controller - it's slow and/or database intensive. Also, the data you get from this call is not actually needed when the page loads because it's displayed after the user interacts with the site.
 
-<h4>Example</h4> You have a chart that has multiple views and a large data set. You need the initial view when the page loads but don’t need the data for the other views until the user changes views. This is a good time to use Ajax to get the data that the chart needs on demand.
+<h3>Example</h3>
+You have a chart that has multiple views and a large data set. You need the initial view when the page loads but don’t need the data for the other views until the user changes views. This is a good time to use Ajax to get the data that the chart needs on demand.
 (Notice I said "on demand." You could get the data when the page is done loading if you think the user will often do whatever is needed to make it appear. However, always making the expensive data call when the page is done does not scale as well - why get the data if you don't need it?)
 <br><br><br>
 <h3>Code sample</h3>
 Here is some sample code I hacked up to get the idea across (note there is some hand waving in the javascript for the charts- let me know if you have improvements/code fixes for the example)
 
-<h4>Data</h4> (This is just a simple example for demonstration purposes, pretend these are expensive database calls)
+<h3>Data</h3> (This is just a simple example for demonstration purposes, pretend these are expensive database calls)
 
 ```ruby
 class Chart
@@ -26,7 +28,7 @@ class Chart
   end
 end
 ```
-<h4>Controller</h4>
+<h3>Controller</h3>
 from:
 
 ```ruby
@@ -47,7 +49,7 @@ def bi_daily
 end
 ```
 
-<h4>View (using haml)</h4>
+<h3>View (using haml)</h3>
 from:
 
 ```haml
@@ -64,7 +66,7 @@ to:
 #url{:style => "display:none;"}
   = request.url
 ```
-<h4>Javascript (using jquery/coffee script)</h4>
+<h3>Javascript (using jquery/coffee script)</h3>
 from:
 
 ```javascript
