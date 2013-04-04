@@ -183,7 +183,7 @@ section p a{
 	background-color: #3b5997;
 }
 
-{
+.btn.dark-blue:hover{
 	color: #fff;
 	background-color: #545454;
 }
