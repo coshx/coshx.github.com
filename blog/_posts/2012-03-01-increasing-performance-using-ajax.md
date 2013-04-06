@@ -55,7 +55,7 @@ end
 <h3>View (using haml)</h3>
 from:
 
-{% highlight haml %}
+{% highlight html %}
 #daily_data{:style => "display:none;"}
   = @daily_data
 #bi_daily_data{:style => "display:none;"}
@@ -65,7 +65,7 @@ from:
 
 to:
 
-{% highlight haml %}
+{% highlight html %}
 #daily_data{:style => "display:none;"}
   = @daily_data
 #url{:style => "display:none;"}
