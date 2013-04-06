@@ -7,16 +7,18 @@ This is one of those gotchas that can throw a developer for a bit of a loop (at 
 
 If you run cucumber tests from the command line:
 
-```bash
+{% highlight bash %}
 % cucumber features
-```
+{% endhighlight %}
+</br>
 then `Rails.env.test?` will be set as expected and `config/environments/test.rb` will be loaded.
 
 However, if you run:
 
-```bash
+{% highlight bash %}
 % rake cucumber
-```
+{% endhighlight %}
+</br>
 then `Rails.env.test?` will be false, and `config/environments/development.rb` will be loaded.
 
 
@@ -31,12 +33,13 @@ Currently, there are a couple simple workarounds if you want both to behave simi
   *EDIT: while this correctly sets `Rails.env`, rails still loads development.rb afterwards*  
   - add the following to the `cucumber:ok` task in `lib/tasks/cucumber.rake`:
 
-```ruby
+{% highlight ruby %}
 namespace :cucumber do
   Cucumber::Rake::Task.new({:ok => 'db:test:prepare'}, 'Run features that should pass') do |t|
     ENV['RAILS_ENV'] ||= 'test'
     Rails.env = ActiveSupport::StringInquirer.new(ENV['RAILS_ENV'])
-```
+{% endhighlight %}
+</br>
 
 ### Notes
  - This doesn't occur with rspec, so somehow that gem has gotten the load order correctly. If you know what rspec-rails is doing that cucumber-rails isn't, please point me in the right direction in the comments.

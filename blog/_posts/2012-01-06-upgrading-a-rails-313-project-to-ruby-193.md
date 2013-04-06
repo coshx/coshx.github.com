@@ -31,30 +31,36 @@ not sure if archive-tar-minitar is really needed or not, but tried it as suggest
 Here's what I did step-by-step:
 
 1) download the files as listed in that gist from the [ruby-debug page](http://rubyforge.org/projects/ruby-debug19/):
-
-        linecache19-0.5.13.gem
-        ruby_core_source-0.1.5.gem
-        ruby-debug19-0.11.6.gem
-        ruby-debug-base19-0.11.26.gem
+{% highlight bash %}
+linecache19-0.5.13.gem
+ruby_core_source-0.1.5.gem
+ruby-debug19-0.11.6.gem
+ruby-debug-base19-0.11.26.gem
+{% endhighlight %}
+</br>
 
 2) edit your Gemfile and comment out the line loading ruby-debug. It's probably something like
-
-        gem "ruby-debug19", :require => "ruby-debug"
+{% highlight bash %}
+gem "ruby-debug19", :require => "ruby-debug"
+{% endhighlight %}
+</br>
 
 3) using gem directly, uninstall linecache19, ruby_core_source, ruby-debug19, and ruby-debug-base19.
 
 4) export a variable pointing to your Ruby 1.9.3 source - if you're using [RVM](http://beginrescueend.com/), this will probably work:
-
-    export RVM_SRC=$rvm_path/src/ruby-1.9.3-p0
-
+{% highlight bash %}
+export RVM_SRC=$rvm_path/src/ruby-1.9.3-p0
+{% endhighlight %}
+</br>
 5) now install all the gems:
-
-    gem install archive-tar-minitar
-    gem install ruby_core_source-0.1.5.gem -- --with-ruby-include=/$RVM_SRC
-    gem install linecache19-0.5.13.gem -- --with-ruby-include=/$RVM_SRC
-    gem install ruby-debug-base19-0.11.26.gem -- --with-ruby-include=/$RVM_SRC
-    gem install ruby-debug19-0.11.6.gem -- --with-ruby-include=/$RVM_SRC
-
+{% highlight bash %}
+gem install archive-tar-minitar
+gem install ruby_core_source-0.1.5.gem -- --with-ruby-include=/$RVM_SRC
+gem install linecache19-0.5.13.gem -- --with-ruby-include=/$RVM_SRC
+gem install ruby-debug-base19-0.11.26.gem -- --with-ruby-include=/$RVM_SRC
+gem install ruby-debug19-0.11.6.gem -- --with-ruby-include=/$RVM_SRC
+{% endhighlight %}
+</br>
 6) edit your Gemfile again and uncomment the line loading ruby-debug
 
 7) try running 'rails server' or the like (in development mode, since you shouldn't be enabling the debugger in production anyways) and it should work!
@@ -70,12 +76,13 @@ If you haven't tried out Pry yet, take a look. It's an interesting project that 
 substitute for IRB than it is a debugger, but you can add debugger like features using other gems. The two most prominent choices I found were [pry-debug](https://github.com/Mon-Ouie/pry_debug) and [pry-nav](https://github.com/nixme/pry-nav). The latter was simpler and offered everything I needed, so I elected to use it.
 
 The good news about Pry and pry-debug is they build just fine with Ruby 1.9.3 right away - no Bundler tricks needed. Just add them to your Gemfile:
-
+{% highlight bash %}
     gem "pry", "~> 0.9.7"
     gem "pry-nav", "~> 0.0.4"
-    
+{% endhighlight %}
+</br>    
 Then do a bundle install and you're set. Note that you start Pry with <some object>.pry - generally binding.pry - but we normally use "debugger" in our code. To help ease the transition I added a debugger command that we'll use for the time being. This starts you inside a method rather than right where you had your debugger command, but it's 'good enough':
-
+{% highlight ruby %}
     unless Rails.env == "production"
       class Object
         def debugger
@@ -83,7 +90,8 @@ Then do a bundle install and you're set. Note that you start Pry with <some obje
         end
       end
     end
-    
+{% endhighlight %}
+</br>
 We just started using Pry, so I can't say how I feel about it quite yet (initial impressions are very positive though), but it did succeed at giving us debugging capabilities
 without manual intervention for now.
 

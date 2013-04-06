@@ -3,14 +3,14 @@ layout: post
 title: Installing tsung with homebrew on osx
 author: ben
 ---
-##Update 2012-09-07##
+### Update 2012-09-07
 Tsung 1.4.2 is compiling fine for me with Erlang R15B01 on Mountain Lion, so this post is out of date.
 
 ### Problem
 
 I recently tried installing [tsung](http://tsung.erlang-projects.org) via homebrew on OSX Lion, but got the following error:
 
-```bash
+{% highlight bash %}
 % brew install tsung
 ==> Downloading http://tsung.erlang-projects.org/dist/tsung-1.4.1.tar.gz
 File already downloaded in /Users/btaitelb/Library/Caches/Homebrew
@@ -29,13 +29,14 @@ http://github.com/mxcl/homebrew/blob/master/Library/Formula/tsung.rb#L15
 Error: Failed executing: make install 
 If `brew doctor' does not help diagnose the issue, please report the bug:
     https://github.com/mxcl/homebrew/wiki/checklist-before-filing-a-new-issue
-```
+{% endhighlight %}
+</br>
 
 ### Solution
 
 I was using the latest version of erlang (R15B), so uninstalled that and rolled back to a previous version:
 
-```bash
+{% highlight bash %}
 % brew rm erlang
 Uninstalling /usr/local/Cellar/erlang/R15B...
 
@@ -64,5 +65,4 @@ File already downloaded in /Users/btaitelb/Library/Caches/Homebrew
 ==> make
 ==> make install
 /usr/local/Cellar/tsung/1.4.1: 280 files, 2.8M, built in 114 seconds
-
-```
+{% endhighlight %}

@@ -8,19 +8,8 @@ I'm psyched about getting to take part in [Richmond Startup Weekend](http://rva.
 With all of the fun of taking part in a startup crammed into a single weekend, there are quite a few different ways to approach this event, depending on what you want to get out of it. This is by no means a complete list, but here are some strategies that I believe are effective. I'd love to hear your strategies in the comments.
 
 
-Successful Startup Weekend Strategies
+### Successful Startup Weekend Strategies
 --------------------------------
-
-<style type="text/css">
-  .post-show h5 {
-    color: rgb(105, 183, 49);
-    font-size: 1.6em;
-  }
-  .post-show h6 {
-    color: rgb(233, 69, 19);
-    font-size: 1.5em;
-  }
-</style>
 
 ###View it as a workshop###
 By all means, that's exactly what this is -- a weekend business workshop where you'll get out of it what you put in. So why not put in some more effort and take one of the other strategies here?
@@ -42,7 +31,7 @@ If you're like me and participate because you just want to hack, then this is th
 While everyone's talking about the ideas they like on Friday night, you can instead focus on the team that you think will be most successful. A good team can take a mediocre idea and turn it into a viable business model, especially if the strengths are well distributed across the team. If too many people flock to a team, it can be difficult to utilize everyone's strengths the best without spending too much time with internal communication.
 
 
-Unsuccessful Strategies for Startup Weekend
+### Unsuccessful Strategies for Startup Weekend
 -------------------------------------
 
 ###Focus on the Name###
