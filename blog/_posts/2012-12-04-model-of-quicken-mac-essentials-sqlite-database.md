@@ -5,7 +5,7 @@ author: chielo
 ---
 A rough model of Quicken Mac Essentials sqlite database using ActiveRecord without rails
 
-Setup:
+### Setup:
 -------------------
   - Ruby 1.9.3 on OSX
   - gem install activerecord
@@ -14,11 +14,11 @@ Setup:
 The sqlite file is appropriately named data and within the user file (for example mydata.quickendata/data). 
   - Copy and paste the ruby script below into script.rb which should be contained within the same local working directory as the copy of the database file. 
 
-To Run (prints transactions):
+### To Run (prints transactions):
 -------------------
- - ruby script.rb
+ruby script.rb
 
-```ruby
+{% highlight ruby %}
 #script.rb
 
 require 'active_record'
@@ -126,6 +126,4 @@ CategoryTransaction.find(:all).each do |ct|
     puts ct.inspect 
   end
 end
-
-
-```
+{% endhighlight %}
