@@ -4,10 +4,9 @@ title: Casperjs automation
 author: chielo
 ---
 
-  The following example casperjs script automates the download of your account transactions from Bank of America without involving a third party.  
+The following example casperjs script automates the download of your account transactions from Bank of America without involving a third party.  
 
-
-Setup:
+### Setup:
 -------------------
   - install casperjs (http://casperjs.org/)
   - create file download.js and paste in the script below.
@@ -15,12 +14,12 @@ Setup:
   - set checking\_account\_name with the full text of the link to your checking account which appears in BOA online banking accounts overview.  (For example, "MyAccess Checking - 0123")
   - set security\_answer to the answer of the first of your BOA security challenges. The security challenge is printed to the screen when the script is run so that may be the easiest way of finding this information.
 
- To run:
+### To run:
 -------------------
  - casperjs --web-security=no download.js 
 
 
-```javascript
+{% highlight javascript %}
 //download.js
 
 var online_id = "your online id" ;
@@ -95,6 +94,7 @@ function decode_base64(s) {
   } 
   return r;
 }
+{% endhighlight %}
 
 
 
