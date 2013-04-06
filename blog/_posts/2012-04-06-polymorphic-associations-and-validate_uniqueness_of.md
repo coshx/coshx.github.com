@@ -40,7 +40,7 @@ end
 class Course
   has_many :enrollments
 end
-{% endhilight %}
+{% endhighlight %}
 </br>
 
 Perfect. Now we go ahead and run our uniqueness test and have a beer after a long day...
@@ -71,7 +71,7 @@ next_value = if previous_value.respond_to?(:next)
 else
   previous_value.to_s.next
 end
-{% endhiglight %}
+{% endhighlight %}
 </br>
 
 `AllowValueMatcher` calls `#valid?` on our model.
@@ -83,14 +83,14 @@ def errors_match?
   @errors = [@errors] unless @errors.is_a?(Array)
   @expected_message ? (errors_match_regexp? || errors_match_string?) : (@errors.compact.any?)
 end
-{% endhiglight %}
+{% endhighlight %}
 </br>
 
 The last piece of the puzzle is our `validates_presence_of :enrollee`. `@instance` from above is
 
 {% highlight ruby %}
 #<Enrollment id: nil, enrollee_id: 1, enrollee_type: "UndergradStudenu", course_id: 1>
-{% endhiglight %}
+{% endhighlight %}
 </br>
 
 Without the presence validation, we would never load the `enrollee` object and our test would pass. Without the full validation caused by calling `@instance.valid?` we would similarly never load the `enrollee` object and our test would pass. The combination means that the presence validator attempts to load the full enrollee object and cannot, because its type does not represent a real class.
@@ -108,7 +108,7 @@ describe Enrollment do
 
   it { should validate_uniqueness_of(:course_id).scoped_to :enrollee_type, :enrollee_id }
 end
-{% endhiglight %}
+{% endhighlight %}
 
 </br>
 

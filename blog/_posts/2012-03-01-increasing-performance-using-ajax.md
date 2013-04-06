@@ -27,7 +27,7 @@ class Chart
     [12, 10, 6, 7, 8, 5, 4, 7, 6, 5, 4]
   end
 end
-{% endhiglight %}
+{% endhighlight %}
 </br>
 <h3>Controller</h3>
 from:
@@ -37,7 +37,7 @@ def show
   @daily = Chart.get_daily_data
   @bi_daily = Chart.get_daily_data
 end
-{% endhiglight %}
+{% endhighlight %}
 </br>
 
 to:
@@ -49,7 +49,7 @@ end
 def bi_daily
   render :json => Chart.get_daily_data
 end
-{% endhiglight %}
+{% endhighlight %}
 </br>
 
 <h3>View (using haml)</h3>

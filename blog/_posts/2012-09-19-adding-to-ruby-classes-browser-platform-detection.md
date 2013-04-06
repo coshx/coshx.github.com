@@ -35,7 +35,7 @@ class Browser
   end
 
 end
-{% endhiglight %}
+{% endhighlight %}
 </br>
 
 The platform method returns which of the supported platforms was used as described in our background section above. We can define methods on other Gems and Ruby core classes such as String like this. For example if rails did not provide the <a href="http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html" target="_blank">inflection library</a>, defining methods on String yourself like camelize and underscore could be very useful.
@@ -45,7 +45,7 @@ All that is left to do is update the controller. We can now add something like t
 {% highlight ruby %}
   params[:comment][:created_on_platform] = browser.platform
   @comment = Comment.create(params[:comment])
-{% endhiglight %}
+{% endhighlight %}
 </br>
 All that is left is some type of view to display comment platform analytics now which I am not going to cover.
 
@@ -65,7 +65,7 @@ All that is left is some type of view to display comment platform analytics now 
     object_name.chop!
     params[object_name][:created_on_platform] = browser.platform
   end
-{% endhiglight %}
+{% endhighlight %}
 
 </br>
 
