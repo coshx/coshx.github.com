@@ -15,7 +15,7 @@ server.
 There are three distinct types of output that sinatra_bootstrap can
 generate.
 
-Bare Bones
+### Bare Bones
 ----------
 
     $ take_the_stage sinatra
@@ -23,7 +23,7 @@ Bare Bones
 Generates a `Gemfile` (containing only `sinatra`), and a `main.rb` file
 with a sample `get '/'` block.
 
-Rack Application
+### Rack Application
 ----------------
 
     $ take_the_stage sinatra --rackup
@@ -32,7 +32,7 @@ Same as the bare bones option, but now a `config.ru` file is generated,
 making this option perfect for people who develop with a rack server
 such as [pow](http://pow.cx).
 
-Heroku-Ready
+### Heroku-Ready
 ------------
 
     $ take_the_stage heroku
