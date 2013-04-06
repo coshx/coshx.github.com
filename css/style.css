@@ -471,7 +471,7 @@ nav ul li a.selected, nav ul li a:hover{
 	float: left;	
 }
 
-.team-mate-bio .info .avatar{ 
+.team-mate-bio .info .user{ 
 	padding-top: 7px;
 	padding-bottom: 8px;
 	height: 199px;
@@ -501,10 +501,10 @@ nav ul li a.selected, nav ul li a:hover{
 
 }
 
-.team-mate-bio .info .social-media .google{
+.team-mate-bio .info .social-media .github{
 	width: 9px;
 	height: 40px;
-	background: url(../img/employee-google.png) center center no-repeat;	
+	background: url(../img/employee-github.png) center center no-repeat;	
 	display: inline-block;	
 	border-right: 1px solid #ebebeb;
 	padding: 0 25px;
