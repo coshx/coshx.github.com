@@ -856,6 +856,21 @@ footer ul li a:hover{
 .avatar{
 	display: block;
 	margin: 0 auto;
+	width: 160px;
+	height: 160px;
+	margin: 1.5em auto;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+	-webkit-border-radius: 99em;
+  	-moz-border-radius: 99em;
+  	border-radius: 99em;
+  	-o-border-radius: 99em;
+  	border: 8px solid #fff;
+  	-webkit-box-shadow: #b6b6b6 0px 0px 23px;
+	-moz-box-shadow: #b6b6b6 0px 0px 23px;
+	-o-box-shadow: #b6b6b6 0px 0px 23px;
+	box-shadow: #b6b6b6 0px 0px 23px;
 }
 .blog-wrapper{
 	border-bottom: 1px solid #e9e9e9;

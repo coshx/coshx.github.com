@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Train Your Startup CTO
-author: ben@coshx.com
+author: ben
 ---
 Congratulations, you're now the CEO of your own startup. You have a great idea and are experiencing the entrepreneurial drive. You don't know exactly how big it's going to get, but in the back of your mind you're picturing some tropical resort with soft pink sand, where you'll be enjoying drinks with fresh fruit and tiny umbrellas.
 

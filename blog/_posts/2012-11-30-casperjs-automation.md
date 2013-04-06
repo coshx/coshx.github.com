@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Casperjs automation
-author: chielo@coshx.com
+author: chielo
 ---
 
   The following example casperjs script automates the download of your account transactions from Bank of America without involving a third party.  

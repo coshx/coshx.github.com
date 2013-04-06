@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Startup Weekend Charlottesville
-author: davidkapp@coshx.com
+author: dave
 ---
 **Edit** (_Ben_): I found this unpublished post that Dave wrote right after the previous Charlottesville Startup Weekend, and it's getting me really excited both about mentoring this weekend at [Richmond Startup Weekend](http://rva.startupweekend.org) (at the time of writing this, there are still tickets left for Designers and Developers on the [Eventbrite page](http://swrva.eventbrite.com/)) and for the next [Charlottesville Startup Weekend](http://charlottesville.startupweekend.org/) which is right around the corner.
 

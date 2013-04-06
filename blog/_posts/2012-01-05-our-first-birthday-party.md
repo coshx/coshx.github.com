@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Our First Birthday Party
-author: david@coshx.com
+author: david
 ---
 Last week we did something a little different for our tech lunch. We celebrated our first birthday as a company with a recap and, of course, a retrospective. This was a very exciting milestone so I wanted to share some of my thoughts about it here as well.
 

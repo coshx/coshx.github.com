@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrading a Rails 3.1.3 project to Ruby 1.9.3
-author: davidkapp@coshx.com
+author: dave
 ---
 Ruby 1.9.3 came out at the tail end of October 2011. In addition to the library updates (see [here](http://www.ruby-lang.org/en/news/2011/10/31/ruby-1-9-3-p0-is-released/)),
 it brings some nice performance enhancements as well. One of these enhancements is a fix to the way requiring things is handled, which can speed up the start time of

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby's "and" and "or" operators explained
-author: gabe@coshx.com
+author: gabe
 ---
 `||` and `&&` bind with the precedence that you expect from boolean operators in programming languages (`&&` is very strong, `||` is slightly less strong).
 

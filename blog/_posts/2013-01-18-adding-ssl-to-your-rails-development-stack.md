@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding SSL to Your Rails Development Stack
-author: ryan@coshx.com
+author: ryan
 ---
 The biggest difference between the development and production stacks for most applications I've worked on has been the inclusion of 
 

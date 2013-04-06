@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introducing sinatra_bootstrap
-author: ryan@coshx.com
+author: ryan
 ---
 [Sinatra](http://www.sinatrarb.com/) is a great way to quickly prototype
 an idea or build one-off projects with minimum fuss. The only problem

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: San Francisco Office Now Open
-author: gabe@coshx.com
+author: gabe
 ---
 
 I'm happy to announce our new permanent office in San Francisco, as well as our first San Francisco hire, Michael Makarov.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing tsung with homebrew on osx
-author: ben@coshx.com
+author: ben
 ---
 ##Update 2012-09-07##
 Tsung 1.4.2 is compiling fine for me with Erlang R15B01 on Mountain Lion, so this post is out of date.

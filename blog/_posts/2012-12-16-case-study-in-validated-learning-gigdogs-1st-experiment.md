@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Case Study in Validated Learning GigDog's 1st Experiment
-author: ben@coshx.com
+author: ben
 ---
 ### Background ###
 

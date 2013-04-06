@@ -1,7 +1,7 @@
 ---
 layout: post
 title: rake cucumber loads development environment
-author: ben@coshx.com
+author: ben
 ---
 This is one of those gotchas that can throw a developer for a bit of a loop (at least it just threw me for a loop for the past half hour).
 

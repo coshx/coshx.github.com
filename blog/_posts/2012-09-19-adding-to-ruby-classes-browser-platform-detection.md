@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding to Ruby Classes Browser Platform Detection
-author: calvin@coshx.com
+author: calvin
 ---
 In this post I am going to show you how to add functionality to existing ruby classes such as arrays, strings and gems from a rails project by using an example that adds a little custom functionality to a browser detection gem.
 

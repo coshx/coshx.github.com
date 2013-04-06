@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polymorphic Associations and validate_uniqueness_of
-author: ryan@coshx.com
+author: ryan
 ---
 One of my favorite helper libraries when testing is [thoughtbot's shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers). They do a great job making common situations easy to test in one line, but I recently ran into a gotcha with the `validate_uniqueness_of` matcher. Validating both uniqueness of a polymorphic association and another validation on the same association can cause some strange error messages regarding undefined classes due to the way scoping and validations are handled.
 

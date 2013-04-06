@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ignoring Local Changes to Tracked Files with Git
-author: gabe@coshx.com
+author: gabe
 ---
 Most of us know we can use the `.gitignore` file to tell git to completely ignore certain untracked files, but what about tracked files?
 

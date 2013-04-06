@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Model of Quicken Mac Essentials Sqlite database
-author: chielo@coshx.com
+author: chielo
 ---
- A rough model of Quicken Mac Essentials sqlite database using ActiveRecord without rails
-
+A rough model of Quicken Mac Essentials sqlite database using ActiveRecord without rails
 
 Setup:
 -------------------

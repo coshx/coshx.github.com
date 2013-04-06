@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Removing Technical Debt
-author: david@coshx.com
+author: david
 ---
 I had a great time at the Mile High Agile 2012 conference. I thoroughly enjoyed and learned from every talk and heard almost 100% positive reviews of all the talks I missed out on in the other tracks. Many thanks to all who were involved in making it happen. I’ll definitely be back next year.
 

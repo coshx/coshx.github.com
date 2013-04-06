@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Parallel Testing for Rails Applications
-author: mike@coshx.com
+author: mike
 ---
 Speed your RSpec, or Cucumber tests up by spreading them across multiple cores.
 

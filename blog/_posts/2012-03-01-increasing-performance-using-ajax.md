@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Increasing Performance using Ajax
-author: calvin@coshx.com
+author: calvin
 ---
 In this post I’m going to show how to use Ajax to get JSON to decrease page load times and make your site scale better. This example assumes you're using Rails, but the idea applies elsewhere as well.
 

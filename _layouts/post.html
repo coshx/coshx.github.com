@@ -4,26 +4,26 @@ layout: default
 
 
 <div class="header-gray">
-		<div class="row"><h1 class="left">Our Blog</h1></div>
+		<div class="row"><h1 class="left">Blogarithm</h1></div>
 	</div>
 
 	<div class="row">		
 			<section class="column nine blogs">
 				<div class="blog-wrapper">
-					<div class="column four"><img src="/img/avatar.png" alt="" class="avatar"></div>
+					{% assign author = site.authors[page.author] %}
+					<div class="column four"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=180" alt="" class="avatar"></div>
 					<section class="column eight blog end">
 
 						<div class="date">{{ page.date | date: "%B %d, %Y" }}</div>
 						<h2>{{ page.title }}</h2>
 										
 						<p>{{ content }}</p>
-
-						
+		
 					</section>
 					
 				</div>				
-				<a href="" class="prev-post">Previous Post</a>
-				<a href="" class="next-post">Next Post</a>
+				<a href="{{ page.previous.url }}" class="prev-post">Previous Post</a>
+				<a href="{{ page.next.url }}" class="next-post">Next Post</a>
 			</section>
 			<section class="column three end">
 				<section class="column three end">

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Startup Weekend Love from #cville to #rva
-author: ben@coshx.com
+author: ben
 ---
 I'm psyched about getting to take part in [Richmond Startup Weekend](http://rva.startupweekend.org/) this coming weekend, not only because of the [great](http://twitter.com/aneeshchopra) [hackers](http://twitter.com/FraserDesign) I'll get to meet there, but because I get to watch ideas take form. They go from a concept mulling in someone's head on Friday night into business plans, prototypes, proofs of concept, communities, excitement, and viable next steps by Sunday evening.
 

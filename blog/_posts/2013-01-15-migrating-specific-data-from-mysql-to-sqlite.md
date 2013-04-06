@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating specific data from mysql to sqlite
-author: chielo@coshx.com
+author: chielo
 ---
 A strategy for migrating specific data (such as all active users) from mysql to a sqlite using Ruby drivers and ActiveRecord.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The ubiquity of NoSQL as presented by MongoDB
-author: davidkapp@coshx.com
+author: dave
 ---
 Not so long ago I went to MongoDB Boulder, a one-day conference put on by 10gen, the company behind MongoDB. Aside from one panel I didn't get much out of, it was great. While I do have some experience using MongoDB, I not yet an expert with it (and I certainly have some team members here at Coshx Labs that know it better than I do), so I was looking forward to a chance to improve my skills.
 
