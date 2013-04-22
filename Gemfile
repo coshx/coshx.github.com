@@ -6,3 +6,7 @@ gem 'redcarpet',  '=2.1.1'
 gem 'maruku',     '=0.6.0'
 gem 'rdiscount',  '=1.6.8'
 gem 'RedCloth',   '=4.2.9'
+
+# for serving up site locally
+gem 'rack-jekyll'
+gem 'thin'
