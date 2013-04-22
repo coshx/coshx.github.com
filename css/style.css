@@ -1464,3 +1464,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 select{
 	width: 498px;
 }
+
+#confirmation {
+	display: none;
+}

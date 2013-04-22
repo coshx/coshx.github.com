@@ -222,6 +222,13 @@ jQuery(function(){
 				markers[l].openPopup();
 			}
 		}, 'a.location');
+
+	$('form.contact-form').on('submit', function() {
+		var form = this;
+		setTimeout(function() {
+			$(form).html("<b>Thanks! We'll get back to you soon.</b>");
+		}, 100);
+	});
 	
 	preload([
 	    'img/employees/davekapp-avatar.png',
